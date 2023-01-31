@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+button {
+    height: 40%;
+    width: 100%;
+    font-family: cursive;
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #feda75 0%, #fa7e1e 41%, #d62976 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.error-message {
+    font-family: cursive;
+}
+
+.line-through-text {
+    color: #dbdbdb;
+    display: flex;
+    flex-direction: row;
+}
+
+.line-through-text:before, .line-through-text:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.line-through-text:before {
+    margin-right: 10px
+}
+
+.line-through-text:after {
+    margin-left: 10px
+}
+  
