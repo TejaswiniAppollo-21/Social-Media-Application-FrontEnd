@@ -1,0 +1,36 @@
+<form [formGroup]="signInForm" (ngSubmit)="signInFormSubmit()">
+    <div class="form-group mb-2">
+        <input 
+            type="text" 
+            placeholder="Email" 
+            class="form-control"
+            formControlName="email"
+        >
+        <small
+            *ngIf="formControls['email'].touched && formControls['email'].errors?.['required']"
+            class="text-danger"
+        >Email is required*</small>
+    </div>
+    <div class="form-group mb-2">
+        <input 
+            type="text" 
+            placeholder="Password" 
+            class="form-control"
+            formControlName="password"
+        >
+        <small
+            *ngIf="formControls['password'].touched && formControls['password'].errors?.['required']"
+            class="text-danger"
+        >Password is required*</small>
+    </div>
+    <p class="text-end mb-0 fs-6"><a routerLink="/reset_password">Forgot password?</a></p>
+    <div class="text-center my-3">
+        <button 
+            type="submit"
+            [disabled]="signInForm.invalid"
+        >Sign In</button>
+    </div>
+    <p class="line-through-text">Or</p>
+    <p class="text-center">Create an account? <a routerLink="/signup">Sign Up</a></p>
+</form>
+
